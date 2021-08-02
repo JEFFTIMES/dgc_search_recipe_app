@@ -1,11 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+import SearchBar from './components/SearchBar/SearchBar';
+
 
 function App() {
   return (
-    <div class="app-container">
+    <div className="app-container">
       <SearchBar />
-      <SearchResults recipes={{}}/>
     </div>
   
   );
