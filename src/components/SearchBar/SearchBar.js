@@ -36,7 +36,7 @@ function SearchBar(props) {
   // declare an axios to get the data from the API.
   async function getRecipes(requestInputText){
     
-    const response = await axios.get(`https://api.edamam.com/api/recipes/v2?type=public&q=${requestInputText}&app_id=918ce998&app_key=${process.env.REACT_APP_RECIPE_SEARCH_API_KEY}`);
+    const response = await axios.get(`https://api.edamam.com/api/recipes/v2?type=public&q=${requestInputText}&app_id=918ce998&app_key=0a20da66669ae152c136cd62c276c8aa`);
     //console.log(response.data);
     setHits(response.data.hits);
     // console.log(hits);
