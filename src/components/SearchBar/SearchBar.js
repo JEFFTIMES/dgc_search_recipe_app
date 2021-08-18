@@ -15,7 +15,7 @@ function SearchBar(props) {
   function handleInputTextChange(event){
     event.preventDefault();
     setInputText(event.target.value);
-    console.log(inputText);
+    //console.log(inputText);
   }
 
 
@@ -27,15 +27,13 @@ function SearchBar(props) {
   }
 
   //useEffect() is triggered only the fireSearching has been changed.
-  //
+  //calls the getRecipes(fireSearching) to fetch the recipes from the API.
   useEffect(() => {
-    getRecipes(fireSearching).catch((err) =>console.log(err));
-         
+    getRecipes(fireSearching).catch((err) =>console.log(err));      
   },[fireSearching]);
 
   // declare an axios to get the data from the API.
   async function getRecipes(requestInputText){
-    
     const response = await axios.get(`https://api.edamam.com/api/recipes/v2?type=public&q=${requestInputText}&app_id=918ce998&app_key=0a20da66669ae152c136cd62c276c8aa`);
     //console.log(response.data);
     setHits(response.data.hits);
@@ -44,9 +42,7 @@ function SearchBar(props) {
     // console.log(hits[0].recipe.label);
     // console.log(hits[0].recipe.image);
     // hits[0].recipe.ingredientLines.forEach((line) =>console.log(line));
-
   }
-
 
   return (
     <>
@@ -54,8 +50,7 @@ function SearchBar(props) {
         <input id="search-input" type="text" placeholder="input here" onChange={handleInputTextChange}/>
         <button id="search-button" type="button" onClick={handleSearchButtonClick}>Find</button>
       </div>
-      <SearchResults hitsObj={{hits}}/>
-
+      <SearchResults hitsArray={hits}/>
     </>
   );
 }

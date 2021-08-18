@@ -1,12 +1,14 @@
 import React from 'react';
 
 function SearchResults(props){
-  const hits = props.hitsObj.hits;
-
+  const hits = props.hitsArray;
+  
+  //when the app is initialized, the input of searching is empty,
+  //so there is nothing to be rendered, return null to skip the following processing.
   if(hits.length === 0){
     return null;
   }
-  //console.log(props.hitsObj.hits);
+  console.log(props);
   console.log(hits[0].recipe.calories);
   console.log(hits[0].recipe.label);
   console.log(hits[0].recipe.image);

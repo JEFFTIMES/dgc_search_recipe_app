@@ -1,0 +1,12 @@
+
+
+
+
+# GET https://community-open-weather-map.p.rapidapi.com/find?q=london&cnt=5&mode=null&lon=0&type=link%2C%20accurate&lat=0&units=imperial%2C%20metric 
+# X-Rapidapi-Key: c4001c77f7msh99a613c2b24d3d2p19166ejsn8c1095570a94
+# X-Rapidapi-Host: community-open-weather-map.p.rapidapi.com
+# Host: community-open-weather-map.p.rapidapi.com
+
+
+
+GET https://api.edamam.com/api/recipes/v2?type=public&q=shrimp&app_id=918ce998&app_key=0a20da66669ae152c136cd62c276c8aa
